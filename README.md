@@ -28,6 +28,6 @@ VSCode + Docker で LaTeX 環境を構築する．Latexmk を利用してソー�
 2. 作成したリポジトリを clone：`git clone [GitHub repository URL]`
 3. clone したリポジトリを VSCode で開く
 4. cmd + shift + P で **"Remote-Containers: Reopen in Container"** を検索し実行すると，Docker コンテナのビルドが実行され，リモート環境を開いた状態でエディタが起動する．
-5. LaTeX Workshop の設定：リンク先の [`settings.json`](https://gist.github.com/nukopy/ec870ac99ff27dd9f126cab7bf8e700d)（Gist）の設定をコピペする
+5. LaTeX Workshop の設定：リンク先の [`settings.json`](https://gist.github.com/nukopy/ec870ac99ff27dd9f126cab7bf8e700d#file-settings-json)（Gist）の設定をコピペする
 6. プレビューを開く：`src/main.tex`（編集したいファイルで OK）を開いた状態にし，cmd + shift + P で **"LaTeX Workshop: View LaTeX PDF file"** を検索し実行すると，右ペインに PDF が表示される（エディタ右上の虫眼鏡ボタンを押してもプレビューを表示できる）．
 7. 後は自由に LaTeX ソースを作成・編集するだけ
