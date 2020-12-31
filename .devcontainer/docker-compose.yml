@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  latex-in-docker-on-vscode:
+    image: nukopy/debian-latex-jp
+    command: sleep infinity
+    volumes:
+      - ../:/workdir
+      - ../.latexmkrc:/root/.latexmkrc
+    environment:
+      SHELL: "/bin/bash"
