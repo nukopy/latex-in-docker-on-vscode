@@ -28,6 +28,7 @@ VSCode + Docker で LaTeX 環境を構築する．
 - VSCode 1.52.1
 - VSCode Extension
   - Remote - Containers v0.154.1
+  - LaTeX Workshop v8.15.0
 
 ## Caution
 
