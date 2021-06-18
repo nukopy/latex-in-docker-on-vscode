@@ -3,6 +3,9 @@
   "dockerComposeFile": "docker-compose.yml",
   "extensions": ["lfs.vscode-emacs-friendly", "james-yu.latex-workshop"],
   "service": "texlive-ja",
+  "settings": {
+    "terminal.integrated.shell": "/bin/bash"
+  },
   "workspaceFolder": "/workdir",
   "shutdownAction": "stopCompose"
 }
