@@ -1,3 +1,3 @@
-FROM nukopy/ubuntu-texlive-ja:latest
+FROM nukopy/ubuntu-texlive-ja:texlive2022
 
 CMD ["/bin/bash"]
