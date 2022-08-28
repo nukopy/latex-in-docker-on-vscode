@@ -1,0 +1,35 @@
+\documentclass[a4j,uplatex]{jsarticle}
+
+\usepackage{float}
+\usepackage[dvipdfmx]{hyperref,graphicx}
+
+% for hyperref(cf: https://ossyaritoori.hatenablog.com/entry/2016/11/11/%E3%80%90Tex%E3%80%91%E5%8D%92%E8%AB%96%E4%BF%AE%E8%AB%96%E3%81%AB%E3%81%AF%E6%98%AF%E9%9D%9E%E3%83%8F%E3%82%A4%E3%83%91%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%AF%E6%A9%9F%E8%83%BD%E3%82%92%E3%81%A4)
+\usepackage{pxjahyper}
+\hypersetup{
+	colorlinks=false, % リンクに色をつけない設定
+	bookmarks=true, % 以下ブックマークに関する設定
+	bookmarksnumbered=true,
+	pdfborder={0 0 0},
+	bookmarkstype=toc,
+}
+\newcommand{\linedhref}[2]{\underline{\href{#1}{\emph{#2}}}}
+
+\begin{document}
+
+吾輩は猫である．名前はまだ無い\cite{Soseki1905}．
+どこで生れたかとんと見当がつかぬ．
+何でも薄暗いじめじめした所で
+ニャーニャー泣いていた事だけは記憶している．
+吾輩はここで始めて人間というものを見た．
+
+\begin{figure}[H]
+	\begin{center}
+		\includegraphics[height=5cm]{img/natsume_soseki.jpeg}
+		\caption{夏目漱石の写真（引用元：\linedhref{https://ja.wikipedia.org/wiki/\%E5\%A4\%8F\%E7\%9B\%AE\%E6\%BC\%B1\%E7\%9F\%B3}{夏目漱石 - Wikipedia}）}
+	\end{center}
+\end{figure}
+
+\bibliography{ref}
+\bibliographystyle{junsrt}
+
+\end{document}

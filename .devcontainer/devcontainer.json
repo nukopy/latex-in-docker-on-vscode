@@ -6,7 +6,28 @@
   ],
   "service": "texlive-ja",
   "settings": {
-    "terminal.integrated.shell": "/bin/bash"
+    "terminal.integrated.shell": "/bin/bash",
+    "latex-workshop.latex.autoBuild.interval": 0,
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
+    "latex-workshop.latex.autoClean.run": "onBuilt",
+    "latex-workshop.latex.recipes": [
+      {
+        "name": "latexmk 🔃",
+        "tools": ["latexmk"]
+      }
+    ],
+    "latex-workshop.latex.tools": [
+      {
+        "name": "latexmk",
+        "command": "latexmk",
+        "args": ["-silent", "%DOC%"],
+        "env": {}
+      }
+    ],
+    "latex-workshop.latexindent.path": "/usr/local/texlive/2020/bin/x86_64-linux/latexindent",
+    "latex-workshop.message.update.show": false,
+    "latex-workshop.synctex.afterBuild.enabled": true,
+    "latex-workshop.view.pdf.viewer": "tab"
   },
   "workspaceFolder": "/workdir",
   "shutdownAction": "stopCompose"

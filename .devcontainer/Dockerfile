@@ -1,3 +1,3 @@
-FROM nukopy/ubuntu-texlive-ja:latest
-RUN apt update && apt install --reinstall ca-certificates -y
+FROM nukopy/ubuntu-texlive-ja:texlive2022
+
 CMD ["/bin/bash"]

@@ -1,0 +1,99 @@
+% This document is based on http://math.shinshu-u.ac.jp/~hanaki/beamer/beamer.html
+\documentclass[dvipdfmx,cjk]{beamer}
+%\documentclass[dvipdfm,cjk]{beamer} % オプションは環境や利用するプログラムによって変える
+%\documentclass[dvips,cjk]{beamer}
+
+% しおり（PDF にしたときの目次）の文字化け防止
+\AtBeginDvi{\special{pdf:tounicode 90ms-RKSJ-UCS2}}
+%\AtBeginDvi{\special{pdf:tounicode EUC-UCS2}}
+
+% 右下のアイコンを消す
+\setbeamertemplate{navigation symbols}{}
+
+% テーマ
+\usetheme{CambridgeUS}
+%\usetheme{Boadilla}           %% Beamer のディレクトリの中の
+%\usetheme{Madrid}             %% beamerthemeCambridgeUS.sty を指定
+%\usetheme{Antibes}            %% 色々と試してみるといいだろう
+%\usetheme{Montpellier}        %% サンプルが beamer\doc に色々とある。
+%\usetheme{Berkeley}
+%\usetheme{Goettingen}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+
+%\usecolortheme{rose}          %% colortheme を選ぶと色使いが変わる
+%\usecolortheme{albatross}
+
+%\useoutertheme{shadow}                 %% 箱に影をつける
+%\usefonttheme{professionalfonts}       %% 数式の文字を通常の LaTeX と同じにする
+
+%\setbeamercovered{transparent}         %% 消えている文字をうっすらと表示する
+\setbeamertemplate{theorems}[numbered]  %% 定理に番号をつける
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{proposition}[thm]{Proposition}
+\theoremstyle{example}
+\newtheorem{exam}[thm]{Example}
+\newtheorem{remark}[thm]{Remark}
+\newtheorem{question}[thm]{Question}
+\newtheorem{prob}[thm]{Problem}
+
+% メタ情報
+\begin{document}
+\title[Sample of Beamer]{Beamer サンプル}
+\author[nukopy]{nukopy}
+\institute[nukopy org.]{nukopy の所属}
+\date{February 6, 2007}
+
+% タイトルスライド
+\begin{frame}
+\titlepage
+\end{frame}
+
+% 目次（\section 名が自動で挿入される）
+\begin{frame}
+\tableofcontents
+\end{frame}
+
+% セクション名（サンプルでは左上のスペースに表示される）
+\section{箇条書き}
+\begin{frame}
+\frametitle{プログラミング言語} % スライドのタイトル
+
+\begin{itemize}
+\item TypeScript\pause % \pause でスライドの分割できる
+\item Go\pause
+\item LaTeX
+\end{itemize}
+\end{frame}
+
+% 定理
+\section{定理型環境}
+\begin{frame} % \newtheorem で新しい環境も作れる
+\begin{thm}
+定理型環境が使える。
+使い方は普通の \LaTeX と同じ
+\end{thm}
+\pause
+
+% 証明
+\begin{proof}
+証明も書ける。
+\end{proof}
+\pause
+
+% 例
+\begin{exam}
+example
+\end{exam}
+\end{frame}
+
+% 文字色を変える
+\section{文字の色を変える}             %% 文字の色を変える
+\begin{frame}
+\frametitle{文字の色を変えてみよう！}
+{\color{red}赤}\pause
+{\color{blue}青}\pause
+{\color{green}緑}
+\end{frame}
+
+\end{document}
