@@ -22,11 +22,11 @@ Docker + Visual Studio Code で快適な LaTeX 執筆環境を構築するリポ
 
 サンプルプロジェクトとして、一般的な LaTeX 文書、Beamer によるスライドの 2 つのソースコードを用意してある。本リポジトリによって構築した LaTeX 環境における VSCode での執筆の様子は以下の通り。画面左側にソースコード、画面右側に生成された PDF ファイルを表示しながら LaTeX 文書を執筆することができる。
 
-- 一般的な LaTeX 文書
+- 一般的な LaTeX 文書の執筆環境
 
 ![LaTeX Document](./docs/img/sample-document.png)
 
-- Beamer によるスライド
+- Beamer によるスライドの執筆環境
 
 ![Slide with LaTeX and Beamer](./docs/img/sample-slide.png)
 
@@ -57,6 +57,6 @@ Docker + Visual Studio Code で快適な LaTeX 執筆環境を構築するリポ
 
 3. cmd + shift + P（`Show All Commands` ショートカット）で **"Remote-Containers: Reopen in Container"** を検索し実行すると、Docker コンテナのビルドが実行され、リモート環境を開いた状態でエディタが起動する
    - 別途パッケージが必要な場合、`.devcontainer/Dockerfile` を編集してからビルドする
-4. PDF プレビューを開く：`src/main.tex`（編集したいファイルで OK）を開いた状態にし、cmd + shift + P で **"LaTeX Workshop: View LaTeX PDF file"** を検索し実行すると、右ペインに PDF が表示される（エディタ右上の虫眼鏡ボタンを押してもプレビューを表示できる）。
-5. 後は自由に LaTeX ソースを作成・編集するだけ。サンプルプロジェクトとして [`sample`](https://github.com/nukopy/latex-in-docker-on-vscode/tree/master/sample) ディレクトリ配下にドキュメント用プロジェクト、Beamer によるスライド用プロジェクトを用意してある、そちらをベースにするのも良い。
-   - デフォルトのビルド設定では upLaTeX を処理系として使用している。これを変更する場合、`.latexmkrc` を編集する必要がある。場合によっては `Dockerfile` に処理系をインストールする処理を追加する必要がある。
+4. PDF プレビューを開く：`src/main.tex` を開いた状態にし、cmd + shift + P で **"LaTeX Workshop: View LaTeX PDF file"** を検索し実行すると、画面右側に LaTeX 文書から生成された PDF が表示される（エディタ右上の虫眼鏡ボタンを押してもプレビューを表示できる）。
+5. 後は自由に LaTeX ソースを作成・編集するだけ。サンプルプロジェクトとして [`sample`](https://github.com/nukopy/latex-in-docker-on-vscode/tree/master/sample) ディレクトリ配下にドキュメント作成用プロジェクト、Beamer によるスライド作成用プロジェクトを用意してあるため、そちらも参考に。
+   - デフォルトのビルド設定では処理系として **upLaTeX** を使用している。これを変更する場合、`.latexmkrc` を編集する必要がある。場合によっては `Dockerfile` に処理系をインストールする処理を追加する必要がある。
