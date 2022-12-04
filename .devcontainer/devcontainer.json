@@ -2,7 +2,7 @@
   "name": "latex-in-docker-on-vscode",
   "dockerComposeFile": "docker-compose.yml",
   "extensions": [
-    "james-yu.latex-workshop"
+    "James-Yu.latex-workshop"
   ],
   "service": "texlive-ja",
   "settings": {
@@ -24,7 +24,21 @@
         "env": {}
       }
     ],
+    // formatter
+    "[latex]": {
+      "editor.formatOnSave": true,
+      "editor.formatOnPaste": true,
+      "editor.defaultFormatter": "James-Yu.latex-workshop"
+    },
     "latex-workshop.latexindent.path": "/usr/local/texlive/2022/bin/x86_64-linux/latexindent",
+    "latex-workshop.latexindent.args": [
+      "%TMPFILE%",
+      "-c=%DIR%/",
+      "-y=defaultIndent: '%INDENT%'"
+    ],
+    "latex-workshop.bibtex-format.sort.enabled": true,
+    "latex-workshop.bibtex-fields.sort.enabled": true,
+    // other settings
     "latex-workshop.message.update.show": false,
     "latex-workshop.synctex.afterBuild.enabled": true,
     "latex-workshop.view.pdf.viewer": "tab"
